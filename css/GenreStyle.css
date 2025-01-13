@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background:  rgb(124, 124, 66);
+  }
+  .wrapper{
+    width: 300px;
+  }
+  .select-btn, .options li{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+  .select-btn{
+    height: 65px;
+    font-size: 22px;
+    padding: 0 20px;
+    border-radius: 7px;
+    background:   rgb(209, 209, 139);
+    justify-content: space-between;
+  }
+  .select-btn i{
+    font-size: 31px;
+    transition: transform 0.3s linear;
+  }
+  .wrapper.active .select-btn i{
+    transform: rotate(-180deg);
+  }
+  .content{
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 7px;
+    background:  rgb(209, 209, 139);
+  }
+  
+  .wrapper.active .content{
+    display: block;
+  }
+  .content .search{
+    position: relative;
+  }
+  .search i{
+    left: 15px;
+    color: rgb(104, 67, 19);
+    font-size: 20px;
+    line-height: 53px;
+    position: absolute;
+  }
+  .search input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 0 15px 0 43px;
+    border: 1px solid rgb(113, 145, 55);
+  }
+  .content .options{
+    margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  .options::-webkit-scrollbar{
+    width: 7px;
+  }
+  .options::-webkit-scrollbar-track{
+    background: ghostwhite;
+    border-radius: 25px;
+  }
+  .options::-webkit-scrollbar-thumb{
+    background: rgb(113, 145, 55);
+    border-radius: 25px;
+  }
+  .options li{
+    height: 50px;
+    padding: 0 13px;
+    font-size: 21px;
+    border-radius: 5px;
+  }
+  .options li:hover{
+    background-color: ghostwhite;
+  }
+  #sidemenu {
+    width: 200px;
+    background: rgb(113, 145, 55);
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .sidemenu ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidemenu li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background:  rgb(113, 145, 55);
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .sidemenu li:hover {
+    background:   ghostwhite;
+  }
+  
+  #books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .book-item {
+    border: 1px  solid rgb(113, 145, 55);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s ease, box-shadow, 0.3s ease;
+  }
+  .book-item img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .book-item h3{
+    font-size: 16px;
+    color: rgb(113, 145, 55);
+  }
+  .book-item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
